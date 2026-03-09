@@ -1,0 +1,4 @@
+package io.github.henriqueaguiiar.user_registry_core_api.api.v1.dto.request;
+
+public record UsersRequestDTO() {
+}
