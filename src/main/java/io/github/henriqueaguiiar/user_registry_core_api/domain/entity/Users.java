@@ -1,5 +1,6 @@
 package io.github.henriqueaguiiar.user_registry_core_api.domain.entity;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;

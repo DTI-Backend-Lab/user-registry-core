@@ -4,7 +4,19 @@ import io.github.henriqueaguiiar.user_registry_core_api.api.v1.dto.request.Users
 import io.github.henriqueaguiiar.user_registry_core_api.api.v1.dto.response.UsersResponseDTO;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.UUID;
+
 @Service
 public interface UsersService {
+
+
     UsersResponseDTO createUser(UsersRequestDTO usersRequestDTO);
+
+    List<UsersResponseDTO> getAllUsers();
+
+    UsersResponseDTO getUser(UUID userId);
+
+
+
 }

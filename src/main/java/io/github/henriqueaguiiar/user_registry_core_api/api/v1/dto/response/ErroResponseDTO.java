@@ -3,6 +3,7 @@ package io.github.henriqueaguiiar.user_registry_core_api.api.v1.dto.response;
 import org.springframework.http.HttpStatus;
 
 import java.time.Instant;
+import java.time.ZonedDateTime;
 
 /**
  * DTO to represent a global erro response formated with status, message, path and timestamp
@@ -14,5 +15,5 @@ import java.time.Instant;
 public record ErroResponseDTO(HttpStatus status,
                               String message,
                               String path,
-                              Instant timestamp) {
+                              ZonedDateTime timestamp) {
 }

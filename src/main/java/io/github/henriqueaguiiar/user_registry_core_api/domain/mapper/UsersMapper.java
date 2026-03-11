@@ -5,6 +5,8 @@ import io.github.henriqueaguiiar.user_registry_core_api.api.v1.dto.response.User
 import io.github.henriqueaguiiar.user_registry_core_api.domain.entity.Users;
 import org.springframework.stereotype.Component;
 
+import java.time.ZoneId;
+
 @Component
 public class UsersMapper {
 
@@ -23,8 +25,7 @@ public class UsersMapper {
                 user.getId(),
                 user.getName(),
                 user.getEmail(),
-                user.getPassword(),
-                user.getCreatedAt()
+                user.getCreatedAt().atZone(ZoneId.of("America/Sao_Paulo"))
         );
     }
 }
