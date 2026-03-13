@@ -1,10 +1,8 @@
 package io.github.henriqueaguiiar.user_registry_core_api.domain.entity;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.io.Serializable;
@@ -19,6 +17,7 @@ import java.util.UUID;
  */
 @Entity
 @Table(name = "TB_USERS")
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Users implements Serializable {
@@ -26,13 +25,12 @@ public class Users implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "id", updatable = false, nullable = false)
+    @Column(name = "id", updatable = false, nullable = true)
     private UUID id;
     @Column(name = "name", nullable = false)
-    private String nome;
+    private String name;
     @Column(name = "email", nullable = false, unique = true)
     private String email;
-    @Setter(AccessLevel.NONE)
     @Column(name = "password", nullable = false)
     private String password;
     @CreationTimestamp
