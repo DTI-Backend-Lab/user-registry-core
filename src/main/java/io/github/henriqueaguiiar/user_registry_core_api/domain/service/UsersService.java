@@ -17,6 +17,10 @@ public interface UsersService {
 
     UsersResponseDTO getUser(UUID userId);
 
+    UsersResponseDTO updateUser(UUID userId, UsersRequestDTO usersRequestDTO);
 
+    UsersResponseDTO updateUserParse(UUID userId, UsersRequestDTO usersRequestDTO);
+
+    void deleteUser(UUID userId);
 
 }

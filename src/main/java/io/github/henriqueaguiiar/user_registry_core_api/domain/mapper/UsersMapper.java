@@ -20,6 +20,13 @@ public class UsersMapper {
         );
     }
 
+    public void updateEntity(Users user, UsersRequestDTO usersRequestDTO) {
+        user.setId(user.getId());
+        user.setName(usersRequestDTO.name());
+        user.setEmail(usersRequestDTO.email());
+        user.setPassword(usersRequestDTO.password());
+    }
+
     public UsersResponseDTO toDTO(Users user) {
         return new UsersResponseDTO(
                 user.getId(),
