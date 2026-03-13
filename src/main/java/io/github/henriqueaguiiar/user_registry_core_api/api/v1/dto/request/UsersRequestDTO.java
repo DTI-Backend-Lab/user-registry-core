@@ -16,6 +16,6 @@ public record UsersRequestDTO(
                             String email,
                             @Schema(example = "password123", description = "The password of the user")
                             @NotBlank(message = "Password is required")
-                            @Size(min = 8, max = 16, message = "Password must be between min 8 and max 16 characters")
+                            @Size(min = 8, max = 10, message = "Password must be between min 8 and max 10 characters")
                             String password) {
 }
